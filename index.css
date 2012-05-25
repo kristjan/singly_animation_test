@@ -1,0 +1,201 @@
+body {
+  background-color: #333;
+  font-size: 24px;
+}
+
+.animated {
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    width: 50px;
+    height: 50px;
+    left: 175px;
+    -webkit-transform: rotateY(0deg);
+  }
+  10% {
+    width: 50px;
+    height: 50px;
+    left: 175px;
+    -webkit-transform: rotateY(0deg);
+  }
+  33% {
+    left: 73px;
+    top: 77px;
+    height: 20px;
+    width: 20px;
+    -webkit-transform: rotateY(180deg);
+  }
+  66% {
+    left: 73px;
+    top: 77px;
+    height: 20px;
+    width: 20px;
+  }
+  90% {
+    left: 216px;
+    top: 77px;
+    height: 20px;
+    width: 20px;
+  }
+  100% {
+    left: 216px;
+    top: 77px;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@-webkit-keyframes hideMe {
+  0% {
+    font-size: 40px;
+    opacity: 1;
+  }
+  10% {
+    font-size: 40px;
+    opacity: 1;
+  }
+  33% {
+    font-size: 24;
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes showEm {
+  0% {
+    font-size: 40px;
+    opacity: 0;
+  }
+  10% {
+    font-size: 40px;
+    opacity: 0;
+  }
+  33% {
+    font-size: 24px;
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blueEm {
+  0% {
+    color: #000;
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    color: #000;
+    opacity: 1;
+  }
+  100% {
+    color: #00AAE4;
+  }
+}
+@-webkit-keyframes phrase {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes cover {
+  0% {
+    width: 240px;
+  }
+  68% {
+    width: 240px;
+  }
+  90% {
+    width: 90px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+.content {
+  position: relative;
+  width: 350px;
+  height: 100px;
+  margin: 100px auto;
+  padding: 50px 25px;
+  background-color: #FFF;
+  text-align: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  border: 4px solid #00AAE4;
+  border-radius: 50px;
+  position: absolute;
+  left: 216px;
+  top: 77px;
+  z-index: 2;
+  -webkit-animation-name: circle;
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform-style: preserve3d;
+}
+
+.circle em {
+  position: absolute;
+  top: -5px;
+  opacity: 0;
+}
+
+.circle .me {
+  -webkit-animation-name: hideMe;
+}
+
+.circle .em {
+  -webkit-animation-name: showEm;
+  -webkit-transform: rotateY(180deg);
+}
+
+em {
+  padding-right: 3px;
+  font-family: 'Bilbo';
+}
+
+img {
+  height: 28px;
+  vertical-align: middle;
+}
+
+.phrase {
+  position: relative;
+}
+
+.phrase .powered {
+  opacity: 1;
+}
+
+.phrase em {
+  color: #00AAE4;
+  -webkit-animation-name: blueEm;
+}
+
+.cover {
+  width: 0px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 40px;
+  background-color: #FFF;
+  z-index: 1;
+  -webkit-animation-name: cover;
+}
